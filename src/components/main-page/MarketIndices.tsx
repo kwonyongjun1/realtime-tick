@@ -1,8 +1,7 @@
 "use client";
 
-import { Card, Typography } from "antd";
+import { Card } from "antd";
 
-const { Text } = Typography;
 
 type MarketCard = {
   title: string;
@@ -27,17 +26,16 @@ export default function MarketIndices() {
           styles={{ body: { padding: 20 } }}
         >
           <div className="flex flex-col gap-2">
-            <Text className="text-sm text-neutral-500!">{card.title}</Text>
-            <Text className="text-2xl font-semibold text-neutral-900!">
+            <text className="text-sm text-neutral-500!">{card.title}</text>
+            <text className="text-2xl font-semibold text-neutral-900!">
               {card.value}
-            </Text>
-            <Text
-              className={`text-sm ${
-                card.isUp ? "text-rose-500!" : "text-sky-600!"
-              }`}
+            </text>
+            <text
+              className={`text-sm ${card.isUp ? "text-rose-500!" : "text-sky-600!"
+                }`}
             >
               {card.change}
-            </Text>
+            </text>
           </div>
         </Card>
       ))}

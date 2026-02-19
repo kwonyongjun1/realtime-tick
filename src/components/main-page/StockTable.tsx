@@ -1,9 +1,8 @@
 "use client";
 
-import { Table, Typography } from "antd";
+import { Table } from "antd";
 import type { ColumnsType } from "antd/es/table";
 
-const { Text } = Typography;
 
 type StockRow = {
   key: string;
@@ -36,32 +35,32 @@ const columns: ColumnsType<StockRow> = [
     title: "순위",
     dataIndex: "rank",
     width: 70,
-    render: (value: number) => <Text className="text-neutral-500!">{value}</Text>,
+    render: (value: number) => <text className="text-neutral-500!">{value}</text>,
   },
   {
     title: "종목명",
     dataIndex: "name",
-    render: (value: string) => <Text className="text-neutral-900!">{value}</Text>,
+    render: (value: string) => <text className="text-neutral-900!">{value}</text>,
   },
   {
     title: "현재가",
     dataIndex: "price",
-    render: (value: string) => <Text className="text-neutral-900!">{value}</Text>,
+    render: (value: string) => <text className="text-neutral-900!">{value}</text>,
   },
   {
     title: "등락률",
     dataIndex: "change",
     render: (value: number) => (
-      <Text className={value >= 0 ? "text-rose-500!" : "text-sky-600!"}>
+      <text className={value >= 0 ? "text-rose-500!" : "text-sky-600!"}>
         {value > 0 ? "+" : ""}
         {value.toFixed(2)}%
-      </Text>
+      </text>
     ),
   },
   {
     title: "거래량",
     dataIndex: "volume",
-    render: (value: string) => <Text className="text-neutral-500!">{value}</Text>,
+    render: (value: string) => <text className="text-neutral-500!">{value}</text>,
   },
 ];
 

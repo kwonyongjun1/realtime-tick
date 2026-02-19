@@ -1,8 +1,7 @@
 "use client";
 
-import { Card, Typography } from "antd";
+import { Card } from "antd";
 
-const { Text } = Typography;
 
 export default function ChartPanel() {
     return (
@@ -12,14 +11,14 @@ export default function ChartPanel() {
         >
             <div className="flex flex-col gap-4">
                 <div>
-                    <Text className="text-lg font-semibold text-neutral-900!">
+                    <text className="text-lg font-semibold text-neutral-900!">
                         미래에셋증권
-                    </Text>
+                    </text>
                     <div className="mt-1 flex items-baseline gap-2">
-                        <Text className="text-xl font-semibold text-rose-500!">
+                        <text className="text-xl font-semibold text-rose-500!">
                             61,800원
-                        </Text>
-                        <Text className="text-sm text-rose-500!">+15.73%</Text>
+                        </text>
+                        <text className="text-sm text-rose-500!">+15.73%</text>
                     </div>
                 </div>
                 <div className="flex h-72 items-center justify-center rounded-lg border border-dashed border-neutral-200 bg-neutral-50 text-xs text-neutral-400">

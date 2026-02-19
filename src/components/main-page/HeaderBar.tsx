@@ -1,8 +1,7 @@
 "use client";
 
-import { Segmented, Select, Space, Typography } from "antd";
+import { Segmented, Select, Space, } from "antd";
 
-const { Text } = Typography;
 
 export default function HeaderBar() {
   return (
@@ -32,12 +31,12 @@ export default function HeaderBar() {
           <div className="flex items-center gap-2 rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1">
             <div className="h-4 w-4 rounded-full bg-neutral-300" />
             <div className="flex flex-col leading-none">
-              <Text className="text-xs font-semibold text-neutral-800">
+              <text className="text-xs font-semibold text-neutral-800">
                 1,443.95
-              </Text>
-              <Text className="text-[11px] text-emerald-600!">
+              </text>
+              <text className="text-[11px] text-emerald-600!">
                 +0.55 (0.03%)
-              </Text>
+              </text>
             </div>
           </div>
         </Space>
