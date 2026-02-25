@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ClientProviders from "./providers/ClinentProviders";
 import { getMessages } from "next-intl/server";
+import { MessagesByLocale } from "@/i18n/types";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,16 +25,14 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const messages = await getMessages() as MessagesByLocale;
 
-  const messages = await getMessages();
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ClientProviders messages={messages}>
-          {children}
-        </ClientProviders>
+        <ClientProviders messages={messages}>{children}</ClientProviders>
       </body>
     </html>
   );
