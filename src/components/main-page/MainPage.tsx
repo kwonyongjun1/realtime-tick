@@ -1,6 +1,6 @@
 "use client";
 
-import HeaderBar from "./HeaderBar";
+import { HeaderBar } from "@/widgets/header-bar";
 import MarketIndices from "./MarketIndices";
 import StockTable from "./StockTable";
 import ChartPanel from "./ChartPanel";

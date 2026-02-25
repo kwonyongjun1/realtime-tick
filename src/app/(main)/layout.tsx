@@ -1,10 +1,17 @@
-import HeaderBar from "@/components/main-page/HeaderBar";
+"use client";
 
-export default function MainLayout({ children }: { children: React.ReactNode }) {
-    return (
-        <div className="min-h-screen bg-neutral-50">
-            <HeaderBar />
-            {children}
-        </div>
-    );
+import { HeaderBar } from "@/widgets/header-bar";
+
+export default function MainLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+
+  return (
+    <div>
+      <HeaderBar />
+      {children}</div>
+  );
 }
+
